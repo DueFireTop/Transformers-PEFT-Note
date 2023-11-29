@@ -1,2 +1,2 @@
 # Transformers-PEFT-Note
-Transformer + PEFT study note
+My study note of (Transformer + PEFT)
