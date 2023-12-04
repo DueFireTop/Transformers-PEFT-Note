@@ -469,3 +469,41 @@ gr.Interface.from_pipeline(pipeline("question-answering", model="uer/roberta-bas
 
  [pipeline.ipynb](..\1-Started\1-pipeline\pipeline.ipynb) 
 
+
+
+# 3. 基础组件之Tokenizer
+
+## 3.1 Tokenizer简介
+
+数据预处理
+- Step1 分词：使用分词器对文本数据进行分词（字、字词）
+- Step2 构建词典：根据数据集分词的结果，构建词典映射（这一步并不绝对，如果采用预训练词向量，词典映射要根据词向量文件进行处理）
+- Step3 数据转换：根据构建好的词典，将分词处理后的数据做映射，将文本序列转换为数字序列
+- Step4 数据填充与截断：在以batch输入到模型的方式中，需要对过短的数据进行填充，过长的数据进行截断，保证数据长度符合模型能够接受的范围，同时batch内的数据维度大小一致
+
+## 3.2 Tokenizer实现
+
+ [tokenizer.ipynb](..\1-Started\2-tokenizer\tokenizer.ipynb) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
