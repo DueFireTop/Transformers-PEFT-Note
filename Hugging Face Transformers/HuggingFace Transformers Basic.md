@@ -487,11 +487,64 @@ gr.Interface.from_pipeline(pipeline("question-answering", model="uer/roberta-bas
 
 
 
+# 4. 基础组件之Model
+
+## 4.1 Model简介
+
+![image-20231205083942140](./HuggingFace%20Transformers%20Basic.assets/image-20231205083942140.png)
+
+- Transformer
+
+  - 原始的Transformer为编码器、解码器模型
+  - Encoder部分接收输入并构建完整特征表示，Decoder部分使用Encoder的编码结果以及其他的输入生成目标序列
+  - 无论是编码器还是解码器，均由多个TransformerBlock堆叠而成
+  - TransformerBlock由注意力机制（Attention）和FFN组成
+
+- 注意力机制
+
+  - 注意力机制的使用是Transformer的一个核心特征，在计算当前词的特征表示时，可以通过注意力机制有选择性的告诉模型要使用哪些上下文
+
+- 模型类型
+
+  <img src="./HuggingFace%20Transformers%20Basic.assets/image-20231205084441477.png" alt="image-20231205084441477" style="zoom:80%;" />
+
+  - 编码器模型：自编码模型，使用Encoder，拥有双向的注意力机制，即计算每一个词的特征时都能看到完整上下文
+  - 解码器模型：自回归模型，使用Decoder，拥有单向的注意力机制，即计算每一个词的特征时都只能看到上文，无法看到下文
+  - 编码器解码器模型：序列到序列模型，使用Encoder+Decoder，Encoder部分使用双向的注意力，Decoder部分使用单向注意力
+
+  | 模型类型                         | 常用预训练模型                     | 适用任务                         |
+  | -------------------------------- | ---------------------------------- | -------------------------------- |
+  | 编码器模型：自编码模型           | ALBERT, BERT, DistillBERT, RoBERTa | 文本分类、命名实体识别、阅读理解 |
+  | 解码器模型：自回归模型           | GPT, GPT-2, Bloom, LLaMA           | 文本生成                         |
+  | 编码器解码器模型：序列到序列模型 | BART, T5, Marian, mBART, GLM       | 文本摘要、机器翻译               |
 
 
 
+## 4.2 Model Head
+
+ModelHead时连接在模型后的层，通常为1个或多个全连接层。
+
+ModelHead将模型的编码的表示结果进行映射，以解决不同类型的任务。
+
+![image-20231205085129699](./HuggingFace%20Transformers%20Basic.assets/image-20231205085129699.png)
 
 
+
+## 4.3 Model基本使用方法
+
+ [model.ipynb](..\1-Started\3-model\model.ipynb) 
+
+
+
+## 4.4 模型微调代码实例
+
+任务类型：文本分类
+
+使用模型：hfl/rbt3
+
+数据集地址：https://github.com/SophonPlus/ChineseNlpCorpus
+
+代码实例： [model.ipynb](..\1-Started\3-model\model.ipynb) 
 
 
 
