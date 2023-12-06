@@ -548,15 +548,17 @@ ModelHead将模型的编码的表示结果进行映射，以解决不同类型�
 
 
 
+# 5. 基础组件之Datasets
 
+## 5.1 Datasets简介
 
+- datasets库是一个非常简单易用的数据集加载库，可以方便快捷的从本地或者huggingface hub加载数据集
+- 公开数据集地址：https://huggingface.co/datasets
+- 文档地址：https://huggingface.co/docs/datasets/index
 
+## 5.2 Datasets基本使用
 
-
-
-
-
-
+ [datasets.ipynb](..\1-Started\4-datasets\datasets.ipynb)  [classification_demo_2.ipynb](..\1-Started\4-datasets\classification_demo_2.ipynb) 
 
 
 
