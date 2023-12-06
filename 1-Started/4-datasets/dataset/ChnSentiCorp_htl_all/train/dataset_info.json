@@ -1,0 +1,42 @@
+{
+  "builder_name": "csv",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "chn_senti_corp_htl_all",
+  "dataset_size": 2971453,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/dirtycomputer/ChnSentiCorp_htl_all@3a786769715323aac1f2611cdd702d92cb0bddb8/ChnSentiCorp_htl_all.csv": {
+      "num_bytes": 2904858,
+      "checksum": null
+    }
+  },
+  "download_size": 2904858,
+  "features": {
+    "label": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "review": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 5876311,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 2971453,
+      "num_examples": 7766,
+      "dataset_name": "chn_senti_corp_htl_all"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}
