@@ -558,7 +558,38 @@ ModelHead将模型的编码的表示结果进行映射，以解决不同类型�
 
 ## 5.2 Datasets基本使用
 
- [datasets.ipynb](..\1-Started\4-datasets\datasets.ipynb)  [classification_demo_2.ipynb](..\1-Started\4-datasets\classification_demo_2.ipynb) 
+ [datasets.ipynb](..\1-Started\4-datasets\datasets.ipynb)  
+
+## 5.3 Datasets模型微调代码优化
+
+[classification_demo_2.ipynb](..\1-Started\4-datasets\classification_demo_2.ipynb) 
 
 
 
+# 6. 基础组件之Evaluate
+
+## 6.1 Evaluate简介
+
+- evaluate库是一个非常简单易用的机器学习模型评估函数库，只需要一行代码便可以加载各种任务的评估函数
+- 函数库地址：https://huggingface.co/evaluate-metric
+- 文档地址：https://huggingface.co/docs/evaluate/index
+
+## 6.2 Evaluate基本使用
+
+ [evaluate.ipynb](..\1-Started\5-evaluate\evaluate.ipynb) 
+
+## 6.3 Evaluate模型微调代码优化
+
+ [classification_demo_2.ipynb](..\1-Started\5-evaluate\classification_demo_2.ipynb) 
+
+
+
+
+
+---
+
+# 0. Others
+
+huggingface中通过任务找到评估函数
+
+![image-20231207095431634](./HuggingFace%20Transformers%20Basic.assets/image-20231207095431634.png)
